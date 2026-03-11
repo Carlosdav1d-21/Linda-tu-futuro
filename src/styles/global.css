@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap');
 
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import "tailwindcss";
 
 @layer base {
   html { scroll-behavior: smooth; }
@@ -13,7 +11,7 @@
   }
 }
 
-@theme {
+:theme {
   --color-primary: #2563EB;
   --color-primary-dark: #1D4ED8;
   --color-cream: #FDF8F5;
@@ -63,7 +61,10 @@
     animation: float 6s ease-in-out infinite;
   }
 
-} /* ← cierra @layer utilities */
+  .font-display {
+    font-family: 'Playfair Display', serif;
+  }
+}
 
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
