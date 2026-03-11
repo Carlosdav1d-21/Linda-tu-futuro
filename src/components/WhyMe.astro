@@ -1,0 +1,80 @@
+---
+const reasons = [
+  {
+    title: "Confianza Total",
+    desc: "Transparencia absoluta en cada plan. Mi prioridad es que entiendas cómo funciona tu seguro de la A a la Z.",
+    icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z",
+    color: "bg-blue-100 text-blue-600",
+  },
+  {
+    title: "Experiencia Comprobada",
+    desc: "Años ayudando a mujeres y familias a construir un futuro financiero sólido y libre de preocupaciones.",
+    icon: "M13 10V3L4 14h7v7l9-11h-7z",
+    color: "bg-purple-100 text-purple-600",
+  },
+  {
+    title: "Atención Personalizada",
+    desc: "No hay soluciones genéricas. Cada asesoría se basa en tus objetivos personales y etapa de vida.",
+    icon: "M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z",
+    color: "bg-rose-100 text-rose-600",
+  },
+];
+---
+<section id="sobre-mi" class="bg-mesh py-24">
+  <div class="mx-auto max-w-7xl px-6 md:px-10">
+    <div class="grid items-center gap-16 lg:grid-cols-2">
+
+      <div class="flex flex-col gap-6">
+        <div class="aos">
+          <span class="text-sm font-bold uppercase tracking-widest text-[#2563EB]">¿Por qué elegirme?</span>
+          <h2 class="mt-3 font-display text-4xl font-bold text-slate-900 md:text-5xl">
+            Más que una póliza,<br>
+            <span class="text-gradient italic">soy tu aliada estratégica</span>
+          </h2>
+        </div>
+
+        {reasons.map((r, i) => (
+          <div class={`aos aos-delay-${i+1} flex items-start gap-4`}>
+            <div class={`flex-shrink-0 h-11 w-11 rounded-2xl ${r.color} flex items-center justify-center`}>
+              <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d={r.icon}/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-slate-900 mb-1">{r.title}</h3>
+              <p class="text-slate-500 text-sm leading-relaxed">{r.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="aos aos-delay-2 flex flex-col gap-6">
+        <p class="text-slate-600 text-lg leading-relaxed">
+          Mi enfoque es 100% centrado en la mujer. Entiendo los retos financieros y de salud únicos que enfrentamos, y estoy aquí para asegurar que nada detenga tus sueños.
+        </p>
+
+        <div class="relative rounded-3xl bg-[#2563EB] p-8 text-white shadow-2xl">
+          <span class="absolute top-4 left-6 font-display text-7xl text-white/20 leading-none select-none">"</span>
+          <p class="relative font-display text-2xl font-medium italic leading-snug">
+            Mi misión es que cada mujer tenga la libertad financiera para decidir su propio futuro.
+          </p>
+          <div class="mt-6 flex items-center gap-3">
+            <div class="h-10 w-10 rounded-full bg-white/20"></div>
+            <div>
+              <p class="font-bold text-sm">Linda</p>
+              <p class="text-blue-200 text-xs">Tu Asesora de Seguros</p>
+            </div>
+          </div>
+        </div>
+
+        <a href="#contacto" class="group inline-flex items-center gap-2 text-[#2563EB] font-semibold hover:gap-3 transition-all">
+          Agenda una consulta gratuita
+          <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>

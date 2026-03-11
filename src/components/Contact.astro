@@ -1,0 +1,48 @@
+---
+---
+<section id="contacto" class="bg-mesh py-24">
+  <div class="mx-auto max-w-4xl px-6 md:px-10">
+    <div class="aos rounded-3xl border border-slate-100 bg-white shadow-2xl p-8 md:p-14">
+      <div class="mb-10 text-center">
+        <span class="text-sm font-bold uppercase tracking-widest text-[#2563EB]">Contacto</span>
+        <h2 class="mt-3 font-display text-4xl font-bold text-slate-900">¿Lista para empezar?</h2>
+        <p class="mt-3 text-slate-500">Completa el formulario y me pondré en contacto contigo en menos de 24 horas.</p>
+      </div>
+
+      <form id="contact-form" class="grid gap-5">
+        <div class="grid gap-5 md:grid-cols-2">
+          <div class="flex flex-col gap-2">
+            <label class="text-sm font-semibold text-slate-700" for="name">Nombre Completo</label>
+            <input id="name" type="text" placeholder="Ej. Ana García" required
+              class="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-blue-100 transition-all"/>
+          </div>
+          <div class="flex flex-col gap-2">
+            <label class="text-sm font-semibold text-slate-700" for="email">Correo Electrónico</label>
+            <input id="email" type="email" placeholder="ana@ejemplo.com" required
+              class="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-blue-100 transition-all"/>
+          </div>
+        </div>
+        <div class="flex flex-col gap-2">
+          <label class="text-sm font-semibold text-slate-700" for="phone">Teléfono (opcional)</label>
+          <input id="phone" type="tel" placeholder="+52 81 0000 0000"
+            class="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-blue-100 transition-all"/>
+        </div>
+        <div class="flex flex-col gap-2">
+          <label class="text-sm font-semibold text-slate-700" for="service">Servicio de Interés</label>
+          <select id="service"
+            class="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-blue-100 transition-all">
+            <option value="">Selecciona una opción</option>
+            <option>Seguro para la Mujer</option>
+            <option>Protección y Ahorro</option>
+            <option>Gastos Médicos Mayores</option>
+            <option>Plan Personal para el Retiro</option>
+          </select>
+        </div>
+        <div class="flex flex-col gap-2">
+          <label class="text-sm font-semibold text-slate-700" for="message">Mensaje (Opcional)</label>
+          <textarea id="message" rows="4" placeholder="Cuéntame un poco sobre tus metas..."
+            class="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-blue-100 transition-all resize-none"></textarea>
+        </div>
+        <button id="submit-btn" type="submit"
+          class="mt-2 w-full rounded-2xl bg-[#2563EB] py-4 text-base font-semibold text-white shadow-xl hover:bg-[#1D4ED8] hover:scale-[1.01] transition-all">
+          Enviar Mensaje

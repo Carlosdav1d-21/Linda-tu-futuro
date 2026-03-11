@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #FDF8F5;
+    color: #1e293b;
+  }
+}
+
+@theme {
+  --color-primary: #2563EB;
+  --color-primary-dark: #1D4ED8;
+  --color-cream: #FDF8F5;
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+@layer utilities {
+  .aos {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .aos.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .aos-delay-1 { transition-delay: 100ms; }
+  .aos-delay-2 { transition-delay: 200ms; }
+  .aos-delay-3 { transition-delay: 300ms; }
+  .aos-delay-4 { transition-delay: 400ms; }
+  .aos-delay-5 { transition-delay: 500ms; }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #2563EB 0%, #7C3AED 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-mesh {
+    background-color: #FDF8F5;
+    background-image:
+      radial-gradient(at 15% 25%, rgba(37,99,235,0.08) 0px, transparent 55%),
+      radial-gradient(at 85% 75%, rgba(124,58,237,0.06) 0px, transparent 55%);
+  }
+
+  .card-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card-lift:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 48px rgba(37,99,235,0.13);
+  }
+
+  .float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+} /* ← cierra @layer utilities */
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-12px); }
+}
